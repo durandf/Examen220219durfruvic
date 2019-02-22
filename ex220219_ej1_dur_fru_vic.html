@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Examen final 22 de febrero de 2019</title>
+    <meta name="descriptiondurfruvic" content="Examen220219durfruvic">
+    <meta name="authordurfruvic" content="Víctor Durán de Frutos">
+    <link rel="stylesheet" href="durfruvicestilos/hojadurfruvicestilos_durfruvic.css">
+    <script type="text/javascript">
+        function reproducir(multi) {
+            document.getElementById(multi).play();
+        }
+        function pausar(multi) {
+            document.getElementById(multi).pause();
+        }
+        function volumenmenos(multi) {
+            document.getElementById(multi).volume -= 0.1;
+        }
+        function volumenmas(multi) {
+            document.getElementById(multi).volume += 0.1;
+        }
+    </script>
+    <script>
+        function cuantosClicks() {
+            if (typeof (Storage) !== "undefined") {
+                if (sessionStorage.cuentadeclicks) {
+                    sessionStorage.cuentadeclicks = Number(sessionStorage.cuentadeclicks) + 2;
+                } else {
+                    sessionStorage.cuentadeclicks = 1;
+                } document.getElementById("id_pdurfruvic").innerHTML = "Has hecho clic en el botón: " + sessionStorage.cuentadeclicks + " veces en esta sesión.";
+            } else {
+                document.getElementById("id_pdurfruvic").innerHTML = "El navegador no soporta almacenamiento local";
+            }
+        }
+    </script>
+</head>
+</head>
+
+<body>
+    <div class="gridcontenedordurfruvic">
+        <header>
+            <img class="imagen1durfruvic" src="../Recursos/Imagen1.jpg" alt="imagen1"><br>
+            <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img
+                    alt="Licencia Creative Commons" style="border-width:0"
+                    src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />Esta obra está bajo una <a
+                rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Licencia Creative Commons
+                Atribución-NoComercial-SinDerivadas 4.0 Internacional</a>.
+        </header>
+
+        <aside class="barra-izquierdadurfruvic">
+            What do I do in State of Decay 2? You will have the ability to control and grow a community of people trying
+            to survive in a post-apocalyptic, zombie-filled world. To help them survive you will need to take care of
+            your base! You’ll spend your time scavenging, finding and trading with other survivors, fulfilling the
+            desires of your community, and last but not least destroying Plague Hearts.
+        </aside>
+
+        <article>
+            <video id="idvideo1durfruvic" class="video1durfruvic" autoplay controls loop>
+                <source src="../Recursos/Video1.mp4" type="video/mp4">
+                <source src="../Recursos/Video1.ogg" type="video/ogg">
+                <source src="../Recursos/Video1.webm" type="video/webm">
+            </video>
+        </article>
+
+        <aside class="barra-derechadurfruvic">
+            As soon as you start the game there is a short tutorial section; pay attention, there is a lot you’ll need
+            to know to survive the zombies. At the end of this section you’ll choose a starting location and find a
+            base. The most important thing to do at this point is to SURVEY! Find somewhere tall (marked on your map
+            with binoculars) to go and look at what’s near your base! This will gain you priceless intel on what
+            resources you may find in any buildings, and help you get the lay of the land.
+            <br>
+            <button class="boton1durfruvic">Me voy a pasar SOD2 estas veces</button>
+            <p class="p1durfruvic" id="id_pdurfruvic"></p>
+        </aside>
+
+        <footer>
+
+            <button onclick="reproducir('idvideo1durfruvic')" class="botonesdurfruvic">Reproducir video</button>
+            <button onclick="pausar('idvideo1durfruvic')" class="botonesdurfruvic">Parar video</button>
+            <button onclick="volumenmas('idvideo1durfruvic')" class="botonesdurfruvic">Subir volumen</button>
+            <button onclick="volumenmenos('idvideo1durfruvic')" class="botonesdurfruvic">Bajar volumen</button>
+
+        </footer>
+    </div>
+</body>
+
+</html>

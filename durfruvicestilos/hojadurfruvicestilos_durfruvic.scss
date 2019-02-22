@@ -1,0 +1,46 @@
+
+  .gridcontenedordurfruvic {
+    display: grid;
+    grid-template-columns: 150px auto 150px;
+    grid-gap: 1em;
+  }
+  
+  header, footer {
+    grid-column: 1 / 4;
+  }
+  
+  @media all and (max-width: 500px) {
+    .barra-izquierdadurfruvic,.barra-derechadurfruvic
+    article {
+      width: 100%;
+    }
+  }
+  
+  /*Estilos específicos y personalizables*/
+  body {
+    margin: 0 auto;
+    max-width: 56em;
+    padding: 1em 0;
+  }
+  
+  header,
+  aside,
+  article,
+  footer {
+    background: #eaeaea;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 25vh;
+  }
+  .botonesdurfruvic{
+      border-radius:5px; ;
+  }
+  .imagen1durfruvic{
+      justify-content: center;
+      margin: auto;
+  }
+  a{
+      text-align: center;
+      margin: auto;
+  }
